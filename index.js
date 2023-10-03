@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             turn.hidden = false;
             turn.id = 'p1'
             turn.innerHTML = playerOneName + "'S TURN (❌)"
+            nextBtn.hidden = true;
         }
         nextBtn.addEventListener('click', e => {
             playerTwoName = playerTwo.value.toUpperCase();
