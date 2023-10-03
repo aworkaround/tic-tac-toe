@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@600&display=swap');
+
+body {
+    font-family: 'AR One Sans', sans-serif;
+}
+
 table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -26,4 +32,17 @@ table tr td:last-child {
 
 a {
     text-decoration: none;
+}
+
+.game-body {
+    pointer-events: none;
+    /* background-color: rgb(227, 227, 227); */
+    background-image: url(win.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.game-body table td {
+    padding: 1rem;
+    border: 5px solid rgb(141, 141, 141);
 }
