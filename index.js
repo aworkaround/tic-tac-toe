@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     playerTwo.hidden = true
     // turn.hidden = true
     playerOne.focus();
+    let nextBtn = document.getElementById('next');
 
     playerOne.addEventListener('keypress', e => {
         if (e.code == 'Enter') {
@@ -20,6 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
             playerTwo.hidden = false;
             playerTwo.focus();
         }
+    })
+
+    nextBtn.addEventListener('click', e => {
+        playerOneName = playerOne.value.toUpperCase();
+        playerOne.hidden = true;
+        playerTwo.hidden = false;
+        playerTwo.focus();
     })
 
     playerTwo.addEventListener('keypress', e => {
@@ -31,6 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
             turn.id = 'p1'
             turn.innerHTML = playerOneName + "'S TURN (❌)"
         }
+        nextBtn.addEventListener('click', e => {
+            playerTwoName = playerTwo.value.toUpperCase();
+            playerTwo.hidden = true;
+            game.hidden = false;
+            turn.hidden = false;
+            turn.id = 'p1'
+            turn.innerHTML = playerOneName + "'S TURN (❌)"
+            nextBtn.hidden = true;
+        })
     })
 });
 
